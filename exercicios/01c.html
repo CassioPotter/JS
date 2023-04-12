@@ -18,17 +18,23 @@
     </h1>
     Valor das compras <input type="number" name="compras" id="inCompras"><br>
     <input type="button" value="Calcular" onclick="btnCalcular()">
-    <div id="outvista"></div>
+    <div id="outVista"></div>
     <div id="outParcelado"></div>
 
     <script>
         function btnCalcular(){
-            var inCompras = document.getElementById("inCompras")
-            var outvista = document.getElementById("outVista")
-            var outParcelado = document.getElementById("outParcelado")
+           
+
+            var inCompras = document.getElementById('inCompras')
+            var outVista = document.getElementById('outVista')
+            var outParcelado = document.getElementById('outParcelado')
             var inCompras = Number(inCompras.value)
 
+            outVista.innerHTML = `As compras deram ${inCompras}`
+
+            var desc = inCompras-(inCompras * 10 / 100)
             
+            outVista.innerHTML = `O valor a vista foi de ${inCompras} para ${desc}`
         }
     </script>
 
