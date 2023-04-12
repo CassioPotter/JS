@@ -30,11 +30,14 @@
             var outParcelado = document.getElementById('outParcelado')
             var inCompras = Number(inCompras.value)
 
-            outVista.innerHTML = `As compras deram ${inCompras}`
+           
 
             var desc = inCompras-(inCompras * 10 / 100)
+            var parc = inCompras/3
+            var parc = parc.toFixed(2)
             
             outVista.innerHTML = `O valor a vista foi de ${inCompras} para ${desc}`
+            outParcelado.innerHTML = `O valor de ${inCompras} parcelado em 3 vezes da ${parc} `
         }
     </script>
 
