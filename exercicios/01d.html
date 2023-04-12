@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01d</title>
+</head>
+<body>
+    <h1>
+        NOTAS
+    </h1>
+    Digite a primeira nota <input type="number" name="nota1" id="inNota1">
+    digite a segunda nota <input type="number" name="nota2" id="inNota2">
+    <input type="button" value="media" onclick="btnMedia()">
+    <p id="outMedia"></p>
+    
+    <script>
+        function btnMedia(){
+            var inNota1 = document.getElementById("inNota1")
+            var inNota2 = document.getElementById("inNota2")
+            var inNota1 = Number(inNota1.value)
+            var inNota2 = Number(inNota2.value)
+            var outMedia = document.getElementById("outMedia")
+
+            outMedia.innerHTML = `As notas são de ${inNota1} e ${inNota2}`
+        }
+    </script>
+</body>
+</html>
