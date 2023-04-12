@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01b</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        PIZZARIA
+    </h1>
+    Valor da conta: <input type="number" name="conta" id="inValor">
+    Numero de pagantes: <input type="number" name="pagantes" id="inPagantes"><br>
+    <input type="button" value="Calcular" onclick="btnValor()">
+    <p>
+        valor por clientes
+    </p>
+    <div id="outValor"></div>
+
+    <script>
+        
+
+        function btnValor(){
+            var inV = document.getElementById('inValor')
+            var inP = document.getElementById('inPagantes')
+            var outV = document.getElementById('outValor')
+            var valor = Number(inV.value)
+            var pagantes = Number(inP.value)
+    
+            var inDiv = valor/pagantes
+            outV.innerHTML += `Com o valor de ${valor}. Sai por ${valor/pagantes} para cada um dos ${pagantes} pagantes `
+
+
+        }
+
+    </script>
+</body>
+   
+</html>
