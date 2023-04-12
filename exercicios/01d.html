@@ -23,7 +23,11 @@
             var inNota2 = Number(inNota2.value)
             var outMedia = document.getElementById("outMedia")
 
-            outMedia.innerHTML = `As notas são de ${inNota1} e ${inNota2}`
+            outMedia.innerHTML = `As notas são de ${inNota1} e ${inNota2} <br>`
+
+            var media = (inNota1 + inNota2) / 2
+
+            outMedia.innerHTML += `A média das notas deu ${media}`
         }
     </script>
 </body>
