@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset=" UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02A</title>
+</head>
+
+<body>
+    <h1>Farmacia</h1>
+    Medicamento <input type="text" id="inTxt">
+    Preço <input type="number" name="preço" id="inPreço">
+    <input type="button" value="Ver Promoção" id="btnPromocao">
+    <div id="outValor"></div>
+    <div id="outPromoçao"></div>
+
+    <script>
+        function CalcularDesconto() {
+            var btnPromocao = document.querySelector('#btnPromocao')
+            var inTxt = document.querySelector('#inTxt')
+            var inPreço = document.querySelector('#inPreço')
+            var inPreço = Number(inPreço.value)      
+            btnPromocao.addEventListener("click", CalcularDesconto)
+
+            alert("clicou")
+
+
+        }
+
+    </script>
+</body>
+
+</html>
