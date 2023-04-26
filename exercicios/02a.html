@@ -20,11 +20,16 @@
             var btnPromocao = document.querySelector('#btnPromocao')
             var inTxt = document.querySelector('#inTxt')
             var inPreço = document.querySelector('#inPreço')
-            var inPreço = Number(inPreço.value)      
+            var inPreço = Number(inPreço.value)     
+
+            var desconto = inPreço*2
+            var preçoDesconto = Math.floor(desconto)
+            
+            outValor.innerHTML = `Valor da compra R$${inPreço}`
+            outPromoçao.innerHTML = `Comprando 2 o valor sai por R$${preçoDesconto}`
             
 
-            alert("clicou")
-
+            
 
         }
 
