@@ -32,8 +32,8 @@
             var inValor = Number(inValor.value)
             var inTempo = Number(inTempo.value)
 
-            var inTempo = inTempo / 15
-            var tempo = Math.ceil(inTempo)
+            var inNovoTempo = inTempo / 15
+            var tempo = Math.ceil(inNovoTempo)
             var valor = tempo * inValor
             
             outValor.innerHTML = `Com o tempo de ${inTempo} minutos sai por R$${valor}`
