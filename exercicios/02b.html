@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1>
@@ -17,11 +19,27 @@
         Tempo de uso do cliente em minutos <input type="number" name="inTempo" id="inTempo">
     </main>
     <footer>
-        <input type="button" value="Calcular valor a pagar" id="btnValor">
+        <input type="button" value="Calcular valor a pagar" id="btnValor" onclick="btnValor()">
         <div id="outValor"></div>
     </footer>
     <script>
-        
+
+
+        function btnValor() {
+            var inValor = document.getElementById('inValor')
+            var inTempo = document.getElementById('inTempo')
+            var outValor = document.getElementById('outValor')
+            var inValor = Number(inValor.value)
+            var inTempo = Number(inTempo.value)
+
+            var inTempo = inTempo / 15
+            var tempo = Math.ceil(inTempo)
+            var valor = tempo * inValor
+            
+            
+        }
+
     </script>
 </body>
+
 </html>
