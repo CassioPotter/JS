@@ -27,7 +27,18 @@
 
     </footer>
     <hr>
-    <script></script>
+    <script>
+        function btnPromocao(){
+            var inValor = document.getElementById('inValor')
+            var inValor = Number(inValor.value)
+            
+            
+            var desconto = inValor/2
+            var valor = (inValor*2)+desconto
+            
+            outRes.innerHTML = `Valor com desconto ${valor}`
+        }
+    </script>
     
 </body>
 </html>
