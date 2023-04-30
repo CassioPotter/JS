@@ -17,16 +17,31 @@
     </header>
     <hr>
     <main>
-        Digite um numero <input type="number" name="inNumero" id="inNumero">
+        Digite um numero <imput type="number" name="inNumero" id="inNumero"><br>
         <input type="button" value="btnCalc" onclick="btnCalc()">
     </main>
     <hr>
     <footer>
-
+        <h2>
+            PAR OU IMPAR
+        </h2>
+        <div id="outRes"></div>
     </footer>
     
     <script>
+        function btnCalc(){
+            var inNumero = document.getElementById('inNumero')
+            var inNumero = Number(inNumero.value)
 
+            var numero = inNumero%2
+
+            if(numero == 0){
+                outRes.innerHTML = `O numero ${inNumero} é par`
+            }
+            else{
+                outRes.innerHTML = `O numero ${inNumero} é impar`
+            }
+        }
     </script>
 </body>
 </html>
