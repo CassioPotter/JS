@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03c</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Parquimetro
+        </h1>
+    </header>
+    <hr>
+    <main>
+        Valor depositado <input type="number" name="inValor" id="inValor"><br>
+        <input type="button" value="confirmar depositado" onclick="btnDep()">
+    </main>
+    <hr>
+    <footer>
+        <p>
+            Tempo
+        </p>
+        <div id="outTempo"></div>
+        <p>
+            Troco
+        </p>
+        <div id="outTroco"></div>
+    </footer>
+
+    <script>
+        function btnDep(){
+            var inValor = document.getElementById('inValor')
+            var inValor = Number(inValor.value)
+
+            if (inValor >= 1.00 && inValor < 1.75){
+                outTempo.innerHTML = `30min`
+                var troco = inValor - 1.00
+                outTroco.innerHTML = `Seu troco é de ${troco}`
+            }
+            else if (inValor >= 1.75 && inValor < 3.00){
+                outTempo.innerHTML = `60min`
+                var troco = inValor - 1.75
+                outTroco.innerHTML = `Seu troco é de ${troco}`
+            }
+            else if (inValor >= 3.00){
+                outTempo.innerHTML = `120min`
+                var troco = inValor-3.00
+                outTroco.innerHTML = `Seu troco é de ${troco}`
+            }
+            else{
+                outTempo.innerHTML = `Valor inferior`
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
