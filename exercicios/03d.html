@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03d</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Triangulo
+        </h1>
+    </header>
+    <hr>
+    <main>
+        lado 1 <input type="number" name="inLado1" id="inLado1"><br>
+        lado 2 <input type="number" name="inLado2" id="inLado2"><br>
+        lado 3 <input type="number" name="inLado3" id="inLado3"><br>
+        <input type="button" value="Verificar triangulo" onclick="btnVer()">
+
+    </main>
+    <hr>
+    <footer>
+        <div id="outTri"></div>
+        <p>
+            Tipo
+        </p>
+        <div id="outTipo"></div>
+
+    </footer>
+
+    <script>
+        function btnVer(){
+            var inLado1 = document.getElementById('inLado1')
+            var inLado2 = document.getElementById('inLado2')
+            var inLado3 = document.getElementById('inLado3')
+            var inLado1 = Number(inLado1.value)
+            var inLado2 = Number(inLado2.value)
+            var inLado3 = Number(inLado3.value)
+
+            if (inLado1<inLado2+inLado3 ){
+                outTri.innerHTML = `Com esses valores forma um triangulo`
+                if (inLado1==inLado2==inLado3){
+                    outTipo.innerHTML = `Equilátero`
+                }
+                else if (inLado1==inLado2 || inLado2==inLado3 || inLado1==inLado3){
+                    outTipo.innerHTML = `Isósceles`
+                }
+                else{
+                    outTipo - `Escaleno`
+                }
+            }else if (inLado2<inLado2+inLado3){
+                outTri.innerHTML = `Com esses valores forma um triangulo`
+                if (inLado1==inLado2==inLado3){
+                    outTipo.innerHTML = `Equilátero`
+                }
+                else if (inLado1==inLado2 || inLado2==inLado3 || inLado1==inLado3){
+                    outTipo.innerHTML = `Isósceles`
+                }
+                else{
+                    outTipo - `Escaleno`
+                }
+            }else if (inLado3<inLado2+inLado1){
+                outTri.innerHTML = `Com esses valores forma um triangulo`
+                if (inLado1==inLado2==inLado3){
+                    outTipo.innerHTML = `Equilátero`
+                }
+                else if (inLado1==inLado2 || inLado2==inLado3 || inLado1==inLado3){
+                    outTipo.innerHTML = `Isósceles`
+                }
+                else{
+                    outTipo - `Escaleno`
+                }
+            }else{
+                outTri.innerHTML = `Com esses valores não formam um triangulo`
+            }
+         
+        }
+    </script>
+    
+</body>
+</html>
