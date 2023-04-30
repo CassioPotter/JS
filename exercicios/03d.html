@@ -39,43 +39,20 @@
             var inLado2 = Number(inLado2.value)
             var inLado3 = Number(inLado3.value)
 
-            if (inLado1<inLado2+inLado3 ){
+            if(inLado1<(inLado2+inLado3) && inLado2<(inLado1+inLado3) && inLado3<(inLado2+inLado1)){
                 outTri.innerHTML = `Com esses valores forma um triangulo`
-                if (inLado1==inLado2==inLado3){
+                if (inLado1==inLado2 && inLado1==inLado3){
                     outTipo.innerHTML = `Equilátero`
                 }
                 else if (inLado1==inLado2 || inLado2==inLado3 || inLado1==inLado3){
                     outTipo.innerHTML = `Isósceles`
                 }
                 else{
-                    outTipo - `Escaleno`
-                }
-            }else if (inLado2<inLado2+inLado3){
-                outTri.innerHTML = `Com esses valores forma um triangulo`
-                if (inLado1==inLado2==inLado3){
-                    outTipo.innerHTML = `Equilátero`
-                }
-                else if (inLado1==inLado2 || inLado2==inLado3 || inLado1==inLado3){
-                    outTipo.innerHTML = `Isósceles`
-                }
-                else{
-                    outTipo - `Escaleno`
-                }
-            }else if (inLado3<inLado2+inLado1){
-                outTri.innerHTML = `Com esses valores forma um triangulo`
-                if (inLado1==inLado2==inLado3){
-                    outTipo.innerHTML = `Equilátero`
-                }
-                else if (inLado1==inLado2 || inLado2==inLado3 || inLado1==inLado3){
-                    outTipo.innerHTML = `Isósceles`
-                }
-                else{
-                    outTipo - `Escaleno`
+                    outTipo.innerHTML = `Escaleno`
                 }
             }else{
-                outTri.innerHTML = `Com esses valores não formam um triangulo`
+                outTri.innerHTML = `Não é um triangulo`
             }
-         
         }
     </script>
     
