@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03b</title>
+   
+</head>
+<body>
+    <header>
+        <h1>
+            Controle de multas
+        </h1>
+        
+    </header>
+    <hr>
+    <main>
+        <h2>
+            Vamos ver a velocidade
+        </h2>
+        Qual a sua velocidade <input type="number" name="inVel" id="inVel">
+        <input type="button" value="btnCalc" onclick="btnCalc()">
+    </main>
+    <hr>
+    <footer>
+        <p>
+            Dirija sempre com segurança
+        </p>
+        <div id="outRes"></div>
+
+    </footer>
+    
+    <script>
+        function btnCalc(){
+            var inVel = document.getElementById('inVel')
+            var inVel = Number(inVel.value)
+
+            var leve = 60*20/100
+            
+            if(inVel<=60){
+                outRes.innerHTML=`Parabéns voce não foi multado`
+            }
+            else if (inVel>60+leve){
+                outRes.innerHTML=`Voçê recebeu uma multa grave`
+            }
+            else{
+                outRes.innerHTML=`Você recebeu uma multa leve`
+            }
+
+        }
+    </script>
+</body>
+</html>
