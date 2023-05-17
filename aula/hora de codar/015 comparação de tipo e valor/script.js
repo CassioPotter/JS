@@ -1,0 +1,5 @@
+document.write('<h1>Tipo ou Valor</h1><br>')
+document.write('<h2>==</h2><br>')
+document.write('== compara apenas o valor <br> Ex: 10 e igual a"10"<br>')
+document.write('<h2>===</h2><br>')
+document.write('=== compara o valor e o tipo<br>Ex: 10 não e igual a "10" pois o segundo é uma string ')
