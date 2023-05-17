@@ -1,0 +1,1 @@
+document.write('<h1>and &&</h1><br>Quando os dois forem verdadeiro<br><br>if(idade >=16 && idade < 18){<br>Voto facultativo}')
